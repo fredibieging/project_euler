@@ -2,7 +2,7 @@
 
 import math
 
-def factors(n):
+def number_of_factors(n):
   i = 2;
   count = 2;
   while i < math.sqrt(n):
@@ -15,7 +15,7 @@ def factors(n):
 
 step = 2
 triangle = 1
-while factors(triangle) < 500:
+while number_of_factors(triangle) < 500:
   triangle += step
   step += 1
 print triangle
