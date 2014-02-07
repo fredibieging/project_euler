@@ -1,6 +1,4 @@
 # http://projecteuler.net/problem=15
+from operator import mul
 
-pascal = [1]
-for _ in xrange(0, 40):
-	pascal = [1] + [pascal[i] + pascal[i+1] for i in range(0, len(pascal) - 1)] + [1]
-print pascal[len(pascal) / 2]
+print reduce(mul, range(21, 41)) / reduce(mul, range(1, 21))
