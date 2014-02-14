@@ -6,4 +6,3 @@ for i in xrange(1, len(triangle)):
 	for j in xrange(1, len(triangle[i]) - 1):
 		triangle[i][j] += max(triangle[i - 1][j], triangle[i - 1][j - 1])
 print max(triangle[len(triangle) - 1])
-print triangle[len(triangle) - 1]
