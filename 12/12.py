@@ -5,7 +5,8 @@ import math
 def number_of_factors(n):
   i = 2;
   count = 2;
-  while i < math.sqrt(n):
+  limit = math.sqrt(n)
+  while i < limit:
     if n % i == 0:
       count += 2
     i += 1;
@@ -18,4 +19,5 @@ triangle = 1
 while number_of_factors(triangle) < 500:
   triangle += step
   step += 1
+
 print triangle
