@@ -22,11 +22,11 @@ for n in xrange(10, limit + 1):
 
 the_sum = 0
 for number in [n for n in xrange(8, limit + 1) if sieve[n] == True]:
-	truncable = True
+	truncatable = True
 	for partition in partitions(number):
 		if sieve[partition] == False:
-			truncable = False
+			truncatable = False
 			break
-	if truncable:
+	if truncatable:
 		the_sum += number
 print the_sum
