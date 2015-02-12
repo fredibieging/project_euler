@@ -1,5 +1,7 @@
 # https://projecteuler.net/problem=35
 
+from sieve import *
+
 def rotate(number, n):
 	return int(number[n:] + number[:n])
 
@@ -13,22 +15,18 @@ def all_rotations(n):
 	return rotations
 
 limit = 1000000
-sieve = [False] * 2 + [True] * (limit - 2)
-for p in xrange(2, limit):
-	if sieve[p]:
-		for i in xrange(p * p, limit, p):
-			sieve[i] = False
+the_sieve = sieve(limit)
 
 for p in xrange(2, limit):
-	if sieve[p]:
+	if the_sieve[p]:
 		rotations = all_rotations(p)
 		circular = True
 		for rotation in rotations:
-			if sieve[rotation] is not True:
+			if the_sieve[rotation] is not True:
 				circular = False
 				break
 		if circular is False:
 			for rotation in rotations:
-				sieve[rotation] = False
+				the_sieve[rotation] = False
 
-print sieve.count(True)	
+print the_sieve.count(True)	

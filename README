@@ -1,0 +1,5 @@
+My solutions to the projecteuler.net.
+
+Functions used by various problem are in "lib" directory. To be able to successfully run all the scripts, it's necessary to put the "lib" directory in the $PYTHONPATH environment variable, as in the example below:
+
+export PYTHONPATH="$PYTHONPATH:/home/use/repo/project_euler/lib"
