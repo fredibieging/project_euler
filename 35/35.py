@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=35
 
-from sieve import *
+from prime import *
 
 def rotate(number, n):
 	return int(number[n:] + number[:n])

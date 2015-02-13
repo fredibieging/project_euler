@@ -1,5 +1,5 @@
 #http://projecteuler.net/problem=10
 
-from sieve import *
+from prime import *
 
 print sum(primes(2000000))

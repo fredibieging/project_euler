@@ -1,7 +1,6 @@
 # https://projecteuler.net/problem=32
 
-def is_pandigital(n):
-	return len(set(sorted(n.replace('0', '')))) == 9	
+from pandigital import *
 
 limit = 10000
 products = set()

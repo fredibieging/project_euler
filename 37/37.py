@@ -1,6 +1,6 @@
 # https://projecteuler.net/problem=37
 
-from sieve import *
+from prime import *
 
 def partitions(n):
 	n = str(n)
